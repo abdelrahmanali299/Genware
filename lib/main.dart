@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genware/features/auth/presentation/views/login_view.dart';
+import 'package:genware/core/utils/app_routers.dart';
 
 void main() {
   runApp(GenWare());
@@ -10,8 +10,9 @@ class GenWare extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouters.router,
       debugShowCheckedModeBanner: false,
-      home: LoginView(),);
+      );
   }
 }

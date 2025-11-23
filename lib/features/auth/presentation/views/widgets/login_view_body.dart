@@ -57,9 +57,11 @@ class LoginViewBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('don\'t have An Account?'),
-              CustomTextButton(text: 'Sign Up', textColor: Colors.red,onPressed: () {
-                
-              },),
+              CustomTextButton(
+                text: 'Sign Up',
+                textColor: Colors.red,
+                onPressed: () {},
+              ),
             ],
           ),
         ],
