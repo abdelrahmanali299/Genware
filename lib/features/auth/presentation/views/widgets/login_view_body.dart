@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:genware/core/utils/app_routers.dart';
 import 'package:genware/costants.dart';
 import 'package:genware/features/auth/presentation/views/widgets/custom_button.dart';
 import 'package:genware/features/auth/presentation/views/widgets/custom_text_button.dart';
 import 'package:genware/features/auth/presentation/views/widgets/custom_text_form_field.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -58,9 +60,12 @@ class LoginViewBody extends StatelessWidget {
             children: [
               Text('don\'t have An Account?'),
               CustomTextButton(
+                isUnderlined: true,
                 text: 'Sign Up',
                 textColor: Colors.red,
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).push(AppRouters.kSignupView);
+                },
               ),
             ],
           ),

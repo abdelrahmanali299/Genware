@@ -5,17 +5,25 @@ class CustomTextButton extends StatelessWidget {
     super.key,
     this.onPressed,
     required this.text,
-    required this.textColor,
+    required this.textColor,  this.isUnderlined=false,
   });
   final void Function()? onPressed;
   final String text;
   final Color textColor;
+  final bool isUnderlined;
   @override
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(padding: EdgeInsets.zero),
       onPressed: onPressed,
-      child: Text(text, style: TextStyle(color: textColor)),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: textColor,
+          decoration: isUnderlined ? TextDecoration.underline : null,
+          decorationColor: Colors.red,
+        ),
+      ),
     );
   }
 }
